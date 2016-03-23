@@ -1,9 +1,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 
-% File:     aghdpl.cls           (LaTeX Document class option "aghdpl")
+% File:     aghdpl.cls
 %          
-% Author:  Marcin Szpyrka     (mszpyrka@agh.edu.pl)
-%          Grzegorz J. Nalepa (gjn@agh.edu.pl)
+% Author:  Ksawery Głaz
 %          AGH University of Science and Technology, Krak�w, POLAND
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -69,19 +68,19 @@ im. Stanis\l{}awa Staszica w Krakowie}}}
 {\large \@facultyPL}}\\\vspace*{2mm}
 {\large\textsc{\@departmentPL}}\vspace*{1cm}
 
-\ifpdflatex\includegraphics[scale=0.3]{agh}
-\else\includegraphics[scale=0.7]{agh}
+\ifpdflatex\includegraphics[scale=0.3]{agh-logo}
+\else\includegraphics[scale=0.7]{agh-logo}
 \fi
 \vspace*{1cm}
 
-{\huge\scshape \@thesistypePL}\\\vspace*{2cm}
+{\huge\scshape \@thesistypePL}\\\vspace*{1cm}
 
 {\LARGE\scshape \@author}\\\vspace*{2cm}
 
-{\LARGE{\bfseries\scshape \@titlePL}}\\\vspace*{3cm}
+{\LARGE{\bfseries\scshape \@titlePL}}\\\vspace*{2cm}
 
 \begin{flushright}
-\begin{minipage}[!h]{6cm} 
+\begin{minipage}[!h]{7cm}
 \large{\scshape Promotor:}\\ \@supervisorPL
 \end{minipage}
 \end{flushright}
@@ -107,49 +106,49 @@ im. Stanis\l{}awa Staszica w Krakowie}}}
 
 \clearpage \titlepage
 
-\begin{center}
+%\begin{center}
 
-{\sffamily{\Large{\bfseries{\textsc AGH\\[2mm]
-University of Science and Technology in Krakow}}}
+%{\sffamily{\Large{\bfseries{\textsc AGH\\[2mm]
+%University of Science and Technology in Krakow}}}
 
-\vspace*{1mm}\rule{\textwidth}{1mm}\vspace*{1mm}
+%\vspace*{1mm}\rule{\textwidth}{1mm}\vspace*{1mm}
 
-{\large \@facultyEN}}\\\vspace*{2mm}
-{\large\textsc{\@departmentEN}}\vspace*{1cm}
+%{\large \@facultyEN}}\\\vspace*{2mm}
+%{\large\textsc{\@departmentEN}}\vspace*{1cm}
 
-\ifpdflatex\includegraphics[scale=0.3]{agh}
-\else\includegraphics[scale=0.7]{agh}
-\fi
-\vspace*{1cm}
+%\ifpdflatex\includegraphics[scale=0.3]{agh}
+%\else\includegraphics[scale=0.7]{agh}
+%\fi
+%\vspace*{1cm}
 
-{\huge\scshape \@thesistypeEN}\\\vspace*{2cm}
+%{\huge\scshape \@thesistypeEN}\\\vspace*{2cm}
 
-{\LARGE\scshape \@author}\\\vspace*{2cm}
+%{\LARGE\scshape \@author}\\\vspace*{2cm}
 
-{\LARGE{\bfseries\scshape \@titleEN}}\\\vspace*{3cm}
+%{\LARGE{\bfseries\scshape \@titleEN}}\\\vspace*{3cm}
 
-\begin{flushright}
-\begin{minipage}[!h]{6cm} 
-\large{\scshape Supervisor:}\\ \@supervisorEN
-\end{minipage}
-\end{flushright}
+%\begin{flushright}
+%\begin{minipage}[!h]{6cm} 
+%\large{\scshape Supervisor:}\\ \@supervisorEN
+%\end{minipage}
+%\end{flushright}
 
-\vfill{\Large Krakow \@date}
+%\vfill{\Large Krakow \@date}
 
-\end{center}
+%\end{center}
 
-\clearpage \titlepage
+%\clearpage \titlepage
 
-\vspace*{15cm} \vfill
-\begin{flushright} 
-\begin{minipage}[!h]{8cm}
-{\Large \@acknowledgements}
-\end{minipage}
-\end{flushright}
+%\vspace*{15cm} \vfill
+%\begin{flushright} 
+%\begin{minipage}[!h]{8cm}
+%{\Large \@acknowledgements}
+%\end{minipage}
+%\end{flushright}
 
-\clearpage
+%\clearpage
 
-\setcounter{page}{5}
+\setcounter{page}{3}
 
 }
 
