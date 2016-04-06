@@ -13,6 +13,8 @@ Na początku warto wspomnieć o kilku ogólnych założeniach, które charaktery
 	\item Obraz wirtualny bądź jego elementy nakładane są na obraz rzeczywisty uzyskany z kamery. Najczęściej punktem odniesienia są różnego rodzaju markery, jednakże mogą to być także różne charakterystyczne przedmioty otoczenia z pozyskanego obrazu rzeczywistego.
 	\item Jednym z najtrudniejszych elementów w rozwijaniu aplikacji wykorzystujących rozszerzoną rzeczywistość jest dokładne obliczanie punktu widzenia użytkownika w czasie rzeczywistym, dzięki czemu wirtualne obrazy są dokładnie dostosowane do rzeczywistych obiektów.
 	\item Obraz rzeczywisty ma zazwyczaj bardziej skomplikowane wymagania kalibracji kamery i rejestracji obrazu.
+	\item Każdy z takich systemów wymaga kalibracji kamery, aby przy rozpoznawaniu obrazów można łatwo było określić położenie i orientację markerów, oraz odpowiednio wyświetlać przypisane im obiekty wirtualne. Niektóre z tych systemów posiadają własną implementację umożliwiającą taką kalibrację. 
+	\item Biblioteki opierające się na markerach, rozpoznają je najczęściej poprzez przetworzenie obrazu rzeczywistego na obraz binarny (czarno-biały) i znajdują w ten sposób czarną ramkę ograniczającą dany marker, a następnie zajmują się ich identyfikacją.
 \end{itemize}
 
 %---------------------------------------------------------------------------
@@ -40,14 +42,15 @@ Biblioteka opiera się na kwadratowych markerach składających się z białego 
 	\item Model ten jest rysowany w planie przechwyconego wideo i są śledzone ruchy wideo w tle, a następnie model jest dołączany do tła.
 	\item Wynikiem końcowym jest pokazany na wyświetlaczu obiekt w tle obrazu z kamery, więc widz widzi renderowany graficzny model nad strumieniem wideo świata rzeczywistego.
 \end{itemize}
-Rysunek 2.1 podsumowuje powyższe kroki.
-\bigskip
 
 \begin{figure}[ht!]
 \centering
 \includegraphics[width=150mm]{diagram.jpg}
-\caption{Działanie ARToolkit krok po kroku \label{artoolkitsteps}}
+\caption{Działanie ARToolkit krok po kroku \label{artoolkitSteps}}
 \end{figure}
+
+Rysunek \ref{artoolkitSteps} podsumowuje powyższe kroki.
+\bigskip
 
 ARToolkit posiada jednak pewne ograniczenia. Obiekt wyświetlany jest tylko wtedy gdy marker jest w polu widzenia kamery. Jeżeli choć część markera zostanie czymś przysłonięta to wirtualny obiekt znika. Natomiast jeżeli granice markera będą poza polem widzenia kamery to obiekt zostanie obcięty. Istnieje również problem w zakresie śledzenia optycznego, ponieważ kiedy markery są przeniesione dalej od kamery to znaczniki zajmują mniej pikseli widzenia kamery i wynikiem jest posiadanie niewystarczającej ilości szczegółów by wyśledzić i zidentyfikować marker. Im większy fizycznie osadzony wzór markera tym dalej wzór markera można wykryć, a więc większa umiejętność wykrywania markera. Wreszcie, wyniki śledzenia są również zależne od warunków oświetleniowych. Zbyt mocne oświetlenie może tworzyć odbicia i odblaski (plamy) na paierowych markerach i tak sprawiają, że trudniej znaleźć kwadratowy marker. Cienie mogą być rzucone w poprzek papieru, rozbijając białe obszary na obrazie z kamery.
 
@@ -56,7 +59,46 @@ ARToolkit posiada jednak pewne ograniczenia. Obiekt wyświetlany jest tylko wted
 \section{ArUco}
 \label{sec:aruco}
 
+Podobnie jak ARToolkit biblioteka ArUco opiera sie na kwadratowych znaczniakach ograniczonych czarną ramką. Jest to prosta biblioteka napisana w C++ umożliwiająca detekcję markerów za pomocą niewielkiej ilości kodu. Biblioteka także nie jest bardzo wymagająca, gdyż potrzeba doinstalować tylko bibliotekę OpenCV, na której się ona opiera. Powstały także implementacje w językach Java (dokumentacja tylko w języku hiszpańskim na stronie twórców projektu) i Python, tak więc korzystanie z biblioteki jest możliwe na każdej platformie, na której da się zainstalować i skonfigurować bibliotekę OpenCV. Niestety nie ma możliwości aby wykorzystać ArUco do programowania aplikacji mobilnych. Zdecydowaną zaletą tego projektu jest uproszczona budowa markerów, które kodowane są binarnie za pomocą białych i czarnych pól kwadratowych wewnątrz ramki. Dodatkowo prosta instalacja oraz przykładowe programy podane na stronie producentów biblioteki \cite{ArUco} powodują, że zapoznanie się oraz jej użytkowanie jest dużo łatwiejsze i przyjemniejsze.
+\bigskip
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=50mm]{aruco-marker.png}
+\caption{Przykładowy marker rozpoznawany przez ArUco. \label{arucoMarker}}
+\end{figure}
+
+Jak widać na rysunku \ref{arucoMarker} kwadratowy marker możemy podzielić siatką na mniejsze równych rozmiarów kwadraty (dokładnie 7x7) jednakże te brzegowe są poświęcone na ramkę markera, tak więc mamy 5x5 pól do binarnego kodowania znacznika (gdzie pole czarne oznacza 0, a pole białe 1) co powinno ułatwić, a nawet przyspieszyć jego detekcję. Każdy marker zawiera kod, który składa się z 5 słów, po pięć bitów każde. Pojedyńcze słowo ma przeznaczone 2 bity na informację oraz 3 pozostałe do detekcji błędów. Dzięki temu możemy uzyskać 2\textsuperscript{10} różnych id.
+\bigskip
+
+Detekcja markerów w ArUco przebiega następująco:
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=100mm]{aruco-detection.png}
+\caption{Detekcja markerów w ArUco. \label{arucoDetection}}
+\end{figure}
+
+\begin{itemize}
+	\item Zamieniamy uzyskany z kamery obraz na obraz binarny.
+	\item Dla uzyskanego czarno-białego obrazu stosujemy Adaptive Thresholding by wykryć wszystkie krawędzie (Zdjęcie (1) na obrazku \ref{arucoDetection}).
+	\item Wykrywamy kontury. Po tym kroku mamy wykryte nie tylko kontury markerów, ale także różne inne nie potrzebne nam kontury, dlatego musimy je przefiltrować:
+	\begin{itemize}
+		\item Usuwamy krawędzie z małą liczbą punktów (Zdjęcie (2) na obrazku \ref{arucoDetection}).
+		\item Aproksymujemy łamane konturów i zachowujemy tylko te, które posiadają dokładnie 4 wypukłe rogi (Zdjęcie (3) na obrazku \ref{arucoDetection}).
+	\end{itemize}
+	\item Sortujemy uzyskane rogi w kierunku przeciwnym do wskazówek zegara.
+	\item Usuwamy z prostokąty znajdujące się zbyt blisko siebie ponieważ Adaptive Thresholding wykrywa też prostokąty wewnętrzne w markerach (Zdjęcie (4) na obrazku \ref{arucoDetection}).
+	\item Identyfikujemy markery:
+	\begin{itemize}
+		\item Usuwamy perspektywę projekcji (kamera może nie być ustawiona prostopadle do markera) aby uzyskać widok prostopadły markera (Zdjęcie (5) na obrazku \ref{arucoDetection}).
+		\item Dzielimy marker za pomocą algorytmu Otsu na macierz czarnych i białych kwadratowych pól.
+		\item Identyfikacja kodu wewnątrz markera z pominięciem ramki.
+	\end{itemize}
+	\item Dla prawidłowych markerów analizujemy rogi używając interpolacji subpikseli.
+	\item Na końcu obliczamy współrzędne markerów w obrazie kamery poprzez jej parametry uzyskane w kalibracji.
+\end{itemize}
+
+Kolejną zaletą ArUco w przeciwieństwie do ARToolkit jest fakt, że jeżeli w trakcie nagrywania obrazu zostanie przysłonięta część markera to obiekt nie znika całkowicie tylko jest przysłaniany, co obrazuje chociażby przykładowa aplikacja do gry w szachy wykorzystująca ArUco \cite{AugmentedRealityChess} jak i kilka innych przykładów podanych na stronie twórców \cite{ArUco}. Jedną z drobnych niedogodności mogą być warunki oświetleniowe. Jeżeli marker zostanie oświetlony mocnym stumieniem światła to na obrazie pojawi się wielka biała plama w tym miejscu.
 
 % %---------------------------------------------------------------------------
 

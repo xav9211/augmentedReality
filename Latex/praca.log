@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.22)  5 APR 2016 00:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.22)  5 APR 2016 23:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -453,19 +453,19 @@ LaTeX Warning: Unused global option(s):
 (./rozdzial4.aux) (./rozdzial5.aux))
 \openout1 = `praca.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 65.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -562,37 +562,37 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \c@lstlisting=\count109
-LaTeX Font Info:    Try loading font information for T1+phv on input line 66.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 66.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/phv/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/sc' tried instead on input line 66.
+(Font)              Font shape `T1/phv/b/sc' tried instead on input line 67.
 
 <agh-logo.png, id=1, 355.3275pt x 711.65875pt>
 File: agh-logo.png Graphic file (type png)
  <use agh-logo.png>
-Package pdftex.def Info: agh-logo.png used on input line 66.
+Package pdftex.def Info: agh-logo.png used on input line 67.
 (pdftex.def)             Requested size: 106.59906pt x 213.49927pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 66.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 67.
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 66.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 66.
+(Font)              <10.95> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 66.
+(Font)              <8> on input line 67.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 66.
+(Font)              <6> on input line 67.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./agh-logo.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/sc' in size <12> not available
-(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 66.
+(Font)              Font shape `T1/ptm/b/sc' tried instead on input line 67.
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 
  []
 
@@ -600,9 +600,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 66--66
 
 ]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 68.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 69.
  (./praca.toc)
 \tf@toc=\write3
 \openout3 = `praca.toc'.
@@ -625,13 +625,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Undefined control sequence.
 \f@ncyolf ->\small \@shortauthor 
                                  \quad \textit {\@shorttitlePL }\strut 
-l.71 \include{rozdzial1}
+l.72 \include{rozdzial1}
                         
 ? 
 ! Undefined control sequence.
 <recently read> \@shorttitlePL 
                                
-l.71 \include{rozdzial1}
+l.72 \include{rozdzial1}
                         
 ? 
 [5]
@@ -639,11 +639,15 @@ l.71 \include{rozdzial1}
 
  (./rozdzial2.tex
 Rozdzia\l  2.
-[6
+
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [6
 
 
 
-] <diagram.jpg, id=29, 259.2084pt x 113.0624pt>
+]
+<diagram.jpg, id=29, 259.2084pt x 113.0624pt>
 File: diagram.jpg Graphic file (type jpg)
  <use diagram.jpg>
 Package pdftex.def Info: diagram.jpg used on input line 48.
@@ -652,34 +656,73 @@ Package pdftex.def Info: diagram.jpg used on input line 48.
 ! Undefined control sequence.
 \f@ncyolf ->\small \@shortauthor 
                                  \quad \textit {\@shorttitlePL }\strut 
-l.53 
+l.54 
      
 ? 
 ! Undefined control sequence.
 <recently read> \@shorttitlePL 
                                
-l.53 
+l.54 
      
 ? 
-[7])
+[7] <aruco-marker.png, id=34, 163.009pt x 163.009pt>
+File: aruco-marker.png Graphic file (type png)
+ <use aruco-marker.png>
+Package pdftex.def Info: aruco-marker.png used on input line 67.
+(pdftex.def)             Requested size: 142.26378pt x 142.26936pt.
+
 ! Undefined control sequence.
 \f@ncyolf ->\small \@shortauthor 
                                  \quad \textit {\@shorttitlePL }\strut 
-l.72 \include{rozdzial2}
+l.69 \end{figure}
+                 
+? 
+! Undefined control sequence.
+<recently read> \@shorttitlePL 
+                               
+l.69 \end{figure}
+                 
+? 
+[8 <./diagram.jpg>] <aruco-detection.png, id=38, 564.509pt x 334.851pt>
+File: aruco-detection.png Graphic file (type png)
+
+<use aruco-detection.png>
+Package pdftex.def Info: aruco-detection.png used on input line 77.
+(pdftex.def)             Requested size: 284.52756pt x 168.77396pt.
+
+! Undefined control sequence.
+\f@ncyolf ->\small \@shortauthor 
+                                 \quad \textit {\@shorttitlePL }\strut 
+l.89 	\item S
+             ortujemy uzyskane rogi w kierunku przeciwnym do wskazówek zegara.
+
+? 
+! Undefined control sequence.
+<recently read> \@shorttitlePL 
+                               
+l.89 	\item S
+             ortujemy uzyskane rogi w kierunku przeciwnym do wskazówek zegara.
+
+? 
+[9 <./aruco-marker.png> <./aruco-detection.png>])
+! Undefined control sequence.
+\f@ncyolf ->\small \@shortauthor 
+                                 \quad \textit {\@shorttitlePL }\strut 
+l.73 \include{rozdzial2}
                         
 ? 
 ! Undefined control sequence.
 <recently read> \@shorttitlePL 
                                
-l.72 \include{rozdzial2}
+l.73 \include{rozdzial2}
                         
 ? 
-[8 <./diagram.jpg>]
+[10]
 \openout2 = `rozdzial3.aux'.
 
  (./rozdzial3.tex
 Rozdzia\l  3.
-) [9
+) [11
 
 
 
@@ -688,7 +731,7 @@ Rozdzia\l  3.
 
  (./rozdzial4.tex
 Rozdzia\l  4.
-) [10
+) [12
 
 
 
@@ -697,31 +740,31 @@ Rozdzia\l  4.
 
  (./rozdzial5.tex
 Rozdzia\l  5.
-) [11
+) [13
 
 
 
 ]
 No file praca.bbl.
 
-Underfull \hbox (badness 5274) in paragraph at lines 90--94
+Underfull \hbox (badness 5274) in paragraph at lines 91--95
 []\T1/ptm/m/n/10.95 Ben Vau-ghan, Phi-lip Lamb, Wally Young.  \T1/ptm/m/it/10.9
 5 AR-To-ol-kit\T1/ptm/m/n/10.95 .  http://www.artoolworks.com/
  []
 
-[12
+[14
 
 
 ] (./praca.aux (./rozdzial1.aux) (./rozdzial2.aux) (./rozdzial3.aux)
 (./rozdzial4.aux) (./rozdzial5.aux)) ) 
 Here is how much of TeX's memory you used:
- 5345 strings out of 493304
- 72235 string characters out of 6139871
- 162413 words of memory out of 5000000
- 8642 multiletter control sequences out of 15000+600000
- 87623 words of font info for 69 fonts, out of 8000000 for 9000
+ 5360 strings out of 493304
+ 72518 string characters out of 6139871
+ 162424 words of memory out of 5000000
+ 8654 multiletter control sequences out of 15000+600000
+ 90345 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,45p,1088b,299s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,45p,1126b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
 dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
@@ -729,10 +772,10 @@ share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb>
-Output written on praca.pdf (12 pages, 234114 bytes).
+Output written on praca.pdf (14 pages, 610146 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 83 PDF objects out of 1000 (max. 8388607)
+ 53 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
