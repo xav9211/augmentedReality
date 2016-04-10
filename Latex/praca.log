@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.22)  5 APR 2016 23:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.22)  10 APR 2016 02:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -693,18 +693,94 @@ Package pdftex.def Info: aruco-detection.png used on input line 77.
 ! Undefined control sequence.
 \f@ncyolf ->\small \@shortauthor 
                                  \quad \textit {\@shorttitlePL }\strut 
-l.89 	\item S
+l.90 	\item S
              ortujemy uzyskane rogi w kierunku przeciwnym do wskaz√≥wek zegara.
 
 ? 
 ! Undefined control sequence.
 <recently read> \@shorttitlePL 
                                
-l.89 	\item S
+l.90 	\item S
              ortujemy uzyskane rogi w kierunku przeciwnym do wskaz√≥wek zegara.
 
 ? 
-[9 <./aruco-marker.png> <./aruco-detection.png>])
+[9 <./aruco-marker.png> <./aruco-detection.png>]
+! Undefined control sequence.
+\f@ncyolf ->\small \@shortauthor 
+                                 \quad \textit {\@shorttitlePL }\strut 
+l.118 \end{itemize}
+                   
+? 
+! Undefined control sequence.
+<recently read> \@shorttitlePL 
+                               
+l.118 \end{itemize}
+                   
+? 
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 143--143
+[]\T1/ptm/m/n/10.95 Rozpoznawanie
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 143--143
+[]\T1/ptm/m/n/10.95 Markery i obiekty z
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]\T1/ptm/m/n/10.95 Ograniczone grub°
+ []
+
+
+Underfull \hbox (badness 3407) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 czarn° ramk° z do-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 woln° za-war-to-±ci°
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]\T1/ptm/m/n/10.95 Ograniczone czarn°
+ []
+
+
+Underfull \hbox (badness 1975) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 ko-do-wa-nymi bi-nar-nie
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 s™o-wami w po-staci
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 czar-nych i bia-™ych
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+[]\T1/ptm/m/n/10.95 Rozpoznaje mar-kery
+ []
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 ze swo-jej bazy mar-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--144
+\T1/ptm/m/n/10.95 mog° pe™-ni¢ rol¶
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+)
 ! Undefined control sequence.
 \f@ncyolf ->\small \@shortauthor 
                                  \quad \textit {\@shorttitlePL }\strut 
@@ -717,12 +793,25 @@ l.73 \include{rozdzial2}
 l.73 \include{rozdzial2}
                         
 ? 
-[10]
+[11]
+! Undefined control sequence.
+\f@ncyolf ->\small \@shortauthor 
+                                 \quad \textit {\@shorttitlePL }\strut 
+l.73 \include{rozdzial2}
+                        
+? 
+! Undefined control sequence.
+<recently read> \@shorttitlePL 
+                               
+l.73 \include{rozdzial2}
+                        
+? 
+[12]
 \openout2 = `rozdzial3.aux'.
 
  (./rozdzial3.tex
 Rozdzia\l  3.
-) [11
+) [13
 
 
 
@@ -731,7 +820,7 @@ Rozdzia\l  3.
 
  (./rozdzial4.tex
 Rozdzia\l  4.
-) [12
+) [14
 
 
 
@@ -740,42 +829,45 @@ Rozdzia\l  4.
 
  (./rozdzial5.tex
 Rozdzia\l  5.
-) [13
+) [15
 
 
 
 ]
 No file praca.bbl.
-
-Underfull \hbox (badness 5274) in paragraph at lines 91--95
-[]\T1/ptm/m/n/10.95 Ben Vau-ghan, Phi-lip Lamb, Wally Young.  \T1/ptm/m/it/10.9
-5 AR-To-ol-kit\T1/ptm/m/n/10.95 .  http://www.artoolworks.com/
- []
-
-[14
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 93.
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+! Undefined control sequence.
+l.94 \newblock \testtt
+                      {https://github.com/artoolkit}
+? 
+[16
 
 
 ] (./praca.aux (./rozdzial1.aux) (./rozdzial2.aux) (./rozdzial3.aux)
 (./rozdzial4.aux) (./rozdzial5.aux)) ) 
 Here is how much of TeX's memory you used:
- 5360 strings out of 493304
- 72518 string characters out of 6139871
- 162424 words of memory out of 5000000
- 8654 multiletter control sequences out of 15000+600000
- 90345 words of font info for 71 fonts, out of 8000000 for 9000
+ 5394 strings out of 493304
+ 73000 string characters out of 6139871
+ 164424 words of memory out of 5000000
+ 8683 multiletter control sequences out of 15000+600000
+ 90966 words of font info for 73 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,11n,45p,1126b,350s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,45p,1126b,348s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/
-dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8
-a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on praca.pdf (14 pages, 610146 bytes).
+dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/ti
+mes/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
+>
+Output written on praca.pdf (16 pages, 628116 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 60 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

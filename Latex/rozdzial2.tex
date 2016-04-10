@@ -86,6 +86,7 @@ Detekcja markerów w ArUco przebiega następująco:
 		\item Usuwamy krawędzie z małą liczbą punktów (Zdjęcie (2) na obrazku \ref{arucoDetection}).
 		\item Aproksymujemy łamane konturów i zachowujemy tylko te, które posiadają dokładnie 4 wypukłe rogi (Zdjęcie (3) na obrazku \ref{arucoDetection}).
 	\end{itemize}
+
 	\item Sortujemy uzyskane rogi w kierunku przeciwnym do wskazówek zegara.
 	\item Usuwamy z prostokąty znajdujące się zbyt blisko siebie ponieważ Adaptive Thresholding wykrywa też prostokąty wewnętrzne w markerach (Zdjęcie (4) na obrazku \ref{arucoDetection}).
 	\item Identyfikujemy markery:
@@ -94,6 +95,7 @@ Detekcja markerów w ArUco przebiega następująco:
 		\item Dzielimy marker za pomocą algorytmu Otsu na macierz czarnych i białych kwadratowych pól.
 		\item Identyfikacja kodu wewnątrz markera z pominięciem ramki.
 	\end{itemize}
+
 	\item Dla prawidłowych markerów analizujemy rogi używając interpolacji subpikseli.
 	\item Na końcu obliczamy współrzędne markerów w obrazie kamery poprzez jej parametry uzyskane w kalibracji.
 \end{itemize}
@@ -105,4 +107,45 @@ Kolejną zaletą ArUco w przeciwieństwie do ARToolkit jest fakt, że jeżeli w 
 \section{Vuforia}
 \label{sec:vuforia}
 
+Ostatnią wybraną biblioteką jest Vuforia. Jest to biblioteka, która umożliwa rozpoznawać obrazki i obiekty oraz rekonstuować elementy świata rzeczywistego. Na stronie projektu \cite{Vuforia} możemy pobrać aplikację, a także przeczytać dość obszernie opis produktu. Mamy do wyboru kilka wersji, najbardziej podstawowa Starter jest darmowa, jednak za pozostałe jej wersje Classic i Cloud trzeba zapłacić dość nie małe ceny. Niestety mimo iż jest biblioteką częściowo darmową to nie pozwala na modyfikacje jej implementacji gdyż nie jest open-source. Posiada jednak bardzo rozbudowane formy detekcji w porównaniu z dwoma poprzednimi bibliotekami. Może rozpoznawać takie elementy jak:
+\begin{itemize}
+	\item Płaskie wydrukowane obrazki, które także mogą pełnić rolę markerów.
+	\item Wiele obrazków na raz np. pudełko składające się z obrazków.
+	\item Obiekty o kształtach walcowatych np. kubki, piszki itp.
+	\item Markery w ramkach - udostępnia 512 numerycznie zakodowanych markerów.
+	\item Teksty - rozpoznaje około 100 tysięcy angielskich słów ze słownika.
+	\item Róznego rodzaju obiekty 3D.
+\end{itemize}
 
+Platforma składa się z 3 głównych elementów:
+\begin{itemize}
+	\item The Vuforia Engine - jest to biblioteka od strony klienta statycznie połączona z tworzoną aplikacją za pomocą Vuforii.
+	\item Tools - środowisko zapewnia narzędzia do tworzenia celów do wykrywania (markerów, obrazków), zarządzania bazą danych je zawierającą czy też do zabezpieczania licencji aplikacji.
+	\item Cloud Recognition Service - serwis wykorzystywany gdy aplikacja potrzebuje przetwarzać duże zbiory obrazów lub baza danych jest często uaktualniana.
+\end{itemize}
+
+Vuforia jest dość mocno rozbudowaną biblioteką dającą sporą ilość możliwości do wykorzystania w aplikacjach opartych na systemach rozszerzonej rzeczywistości. Jeżeli dana aplikacja nie będzie korzystana do celów komercyjnych możemy korzystać z tej biblioteki za darmo (będzie ona dołączać znak wodny), jeżeli jednak chcemy użyć jej do celów komercyjnych to jest ona dość kosztowna zwłaszcza jeżeli chcemy ją wykorzystać do aplikacji które są często aktualizowane. Na stronie projektu \cite{Vuforia} możemy także znaleźć opis jak zainstalować aplikację oraz przykładowe aplikacje korzystające z tej biblioteki, które dobrze prezentują jej możliwości.
+
+% %---------------------------------------------------------------------------
+
+\section{Podsumowanie}
+\label{sec:podsumowanie}
+
+Obecnie rozszerzona rzeczywistość rozwija się dość szybko by spełniać oczekiwania społeczeństwa, w którym rozwój technologiczny postępuje coraz szybciej. Przedstawione powyżej biblioteki stanowią tylko niewielką część wszystkich systemów, które rozwijają zagadnienie rozszerzonej rzeczywistości. Każda z nich daje różne możliwości rozwiązań co można zobaczyć w tabeli porównującej je \ref{tab:tabelaPodsumowania}.
+
+\begin{table}[h!]
+	\begin{center}
+		\begin{tabular}{| p{35mm} | p{35mm} | p{35mm} | p{35mm} |}
+			\hline
+			\textbf{Cecha} & \textbf{ARToolkit} & \textbf{ArUco} & \textbf{Vuforia} \\ \hline
+			Otwarty kod & \multicolumn{2}{c|}{Tak} & Nie \\ \hline
+			Płatna & \multicolumn{2}{c|}{Nie} & Tylko w celach komercyjnych \\ \hline
+			Rozpoznawanie obrazu & \multicolumn{2}{c|}{Tylko markery} &  Markery i obiekty z obrazu \\ \hline
+			Rodzaje markerów & Ograniczone grubą czarną ramką z dowolną zawartością wewnątrz & Ograniczone czarną ramką z pięcioma zakodowanymi binarnie słowami w postaci czarnych i białych kwadratów & Rozpoznaje markery ze swojej bazy markerów, płaskie obrazy oraz obiekty 3D także mogą pełnić rolę markerów \\ \hline
+			Wieloplatformowe & \multicolumn{3}{c|}{Tak} \\ \hline
+			Aplikacje mobilne & Tak & Nie & Tak \\
+			\hline
+		\end{tabular}
+		\caption{Tabela podsumówująca omówione systemy AR.} \label{tab:tabelaPodsumowania}
+	\end{center}
+\end{table}
